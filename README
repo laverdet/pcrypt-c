@@ -1,0 +1,5 @@
+Run `make`
+
+Include `pcrypt.h` in your project and link `pcrypt.a`.
+
+See `example.c` for usage. `make example` to make the example.
