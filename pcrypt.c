@@ -150,9 +150,9 @@ int decrypt(const char* input, size_t len, char** output) {
 		uint8_t tmp[256];
 		memcpy(tmp, output8 + offset, 256);
 		if (version == 1) {
-			unshuffle(output32 + offset);
+			unshuffle(output32 + offset / 4);
 		} else {
-			unshuffle2(output32 + offset);
+			unshuffle2(output32 + offset / 4);
 		}
 		for (size_t ii = 0; ii < 64; ++ii) {
 			output32[offset / 4 + ii] ^= cipher32[ii];
